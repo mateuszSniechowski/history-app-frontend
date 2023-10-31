@@ -33,7 +33,7 @@ function AddNote() {
     }
 
     try{
-        await axios.post("http://localhost:3306/notes", {title, note, date, place});
+        await axios.post("http://51.20.66.102:3306/notes", {title, note, date, place});
         window.location.reload();
     }catch(err){
         console.log(err);

@@ -9,7 +9,7 @@ function AllNotes() {
   useEffect(() => {
     const fetchAllNotes = async () => {
       try{
-          const res = await axios.get("http://localhost:3306/notes")
+          const res = await axios.get("http://51.20.66.102:3306/notes")
           setContents(res.data);
       } catch(err){
           console.log(err);
@@ -21,7 +21,7 @@ function AllNotes() {
 
   const handleDelete = async (id) => {
       try{
-          await axios.delete("http://localhost:3306/notes/" + id);
+          await axios.delete("http://51.20.66.102:3306/notes/" + id);
           window.location.reload();
       } catch(err){
           console.log(err);

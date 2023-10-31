@@ -24,7 +24,7 @@ function Update(){
         e.preventDefault();
 
         try{
-            await axios.put("http://localhost:3306/notes/" + noteId, note)
+            await axios.put("http://51.20.66.102:3306/notes/" + noteId, note)
             navigate("/");
         } catch(err){
             console.log(err);
